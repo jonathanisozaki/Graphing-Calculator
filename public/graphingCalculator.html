@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="graphingCalculator.css">
+    <title>Graphing Calculator</title>
+</head>
+
+<body>
+    <header id="graph-calculator-header">Graphing Calculator</header>
+    <div id="graphing-calculator-container">
+        <div id="equation-editor">
+            <div id="equation-space">
+                <input class="math-input">
+                <input class="math-input">
+                <div id="select-parent">
+
+                </div>
+                <div id="quadratic-graphs" class="poly-graph-controls">
+                    <header id="quadratic-graphs-title" class="poly-graphs-title">Quadratic Graphs</header>
+                    <div class="poly-graph-sliders">
+                        <div class="a-value">
+                            <span id="a-value-quadratic-label"></span>
+                            <input type="range" min="-100" max="100" value="1" id="a-value-quadratic">
+                        </div>
+
+                        <div class="h-value">
+                            <span id="h-value-quadratic-label"></span>
+                            <input type="range" min="-100" max="100" value="0" id="h-value-quadratic">
+                        </div>
+
+                        <div class="k-value">
+                            <span id="k-value-quadratic-label"></span>
+                            <input type="range" min="-100" max="100" value="0" id="k-value-quadratic">
+                        </div>
+                    </div>
+                </div>
+
+                <div id="cubic-graphs" class="poly-graph-controls">
+                    <header id="cubic-graphs-title" class="poly-graphs-title">Cubic Graphs</header>
+                    <div class="poly-graph-sliders">
+                        <div class="a-value">
+                            <span id="a-value-cubic-label"></span>
+                            <input type="range" min="-100" max="100" value="1" id="a-value-cubic">
+                        </div>
+
+                        <div class="h-value">
+                            <span id="h-value-cubic-label"></span>
+                            <input type="range" min="-100" max="100" value="0" id="h-value-cubic">
+                        </div>
+
+                        <div class="k-value">
+                            <span id="k-value-cubic-label"></span>
+                            <input type="range" min="-100" max="100" value="0" id="k-value-cubic">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <canvas id="coordinate-plane" width="300px" height="300px">
+            
+        </canvas>
+    </div>
+    <script src="/modules/graphingCalculator.js" type="module"></script>
+</body>
+
+</html>
