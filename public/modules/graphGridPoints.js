@@ -7,7 +7,6 @@ export class Point {
 }
 
 
-
 // This is the code to plot a graph.
 export function plotGraph(canvasContext, graphArray, gridWidth, gridHeight, color) {
 
@@ -22,4 +21,22 @@ export function plotGraph(canvasContext, graphArray, gridWidth, gridHeight, colo
         canvasContext.strokeStyle = color;
         canvasContext.arcWidth = 1.5;
     }
+}
+
+// This function returns an array for points of a transformed polynomial 
+export function parentPolynomial(startValue, endValue, a, h, k, power, stepSize) {
+    let graphArray = [];
+    let j = 0;
+    let xValue = startValue;
+
+    while (xValue <= endValue) {
+        let factor = xValue - h;
+        let newY = a * Math.pow(factor, power) + k;
+        let newPoint = new Point(xValue, newY);
+        graphArray.push(newPoint);
+        xValue = xValue + stepSize;
+        j++;
+    }
+
+    return graphArray;
 }

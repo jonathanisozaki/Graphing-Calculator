@@ -1,5 +1,5 @@
 // Imports and Required Packages
-import {Point, plotGraph} from './graphGridPoints.js';
+import {Point, plotGraph, parentPolynomial} from './graphGridPoints.js';
 import {drawXAxis, drawYAxis, drawGridMarkings} from './graphAxes.js';
 import {roundNearestTenth} from './roundNumbers.js';
 
@@ -29,23 +29,6 @@ drawXAxis(coordinatePlaneContext, width, height, gridWidth);
 drawYAxis(coordinatePlaneContext, width, height, gridWidth);
 drawGridMarkings(coordinatePlaneContext, width, height, gridWidth);
 
-// This function returns an array to create f(x) = x^2.
-function parentPolynomial(startValue, endValue, a, h, k, power, stepSize) {
-    let graphArray = [];
-    let j = 0;
-    let xValue = startValue;
-
-    while (xValue <= endValue) {
-        let factor = xValue - h;
-        let newY = a * Math.pow(factor, power) + k;
-        let newPoint = new Point(xValue, newY);
-        graphArray.push(newPoint);
-        xValue = xValue + stepSize;
-        j++;
-    }
-
-    return graphArray;
-}
 
 /* Graph of f(x)=x^2 */
 // 'a' Value
