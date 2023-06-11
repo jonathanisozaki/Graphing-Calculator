@@ -41,9 +41,7 @@ export function drawYAxis(canvasContext, width, height, gridWidth) {
         canvasContext.lineTo(5, yCoord);
         canvasContext.stroke();
         canvasContext.lineWidth = 3;
-
     }
-
     // Saving the drawing on the canvas
     canvasContext.save()
 }
@@ -61,7 +59,6 @@ export function drawGridMarkings(canvasContext, width, height, gridWidth) {
         canvasContext.lineTo((-1) * height / 2, yCoord);
         canvasContext.stroke();
         canvasContext.lineWidth = 1;
-
     }
     //Vertical Grid Markings
     for (let k = 0; k < xValues.length; k++) {

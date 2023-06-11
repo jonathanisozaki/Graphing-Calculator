@@ -38,5 +38,5 @@ export function parentPolynomial(startValue, endValue, a, h, k, power, stepSize)
         j++;
     }
 
-    return graphArray;
+    return graphArray; // These are the points to return
 }
